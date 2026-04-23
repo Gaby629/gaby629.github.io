@@ -257,7 +257,7 @@ function ProfilePage() {
               {/* 5张照片 */}
               {[1, 2, 3, 4, 5].map(i => (
                 <div className="photo-item" key={i}>
-                  <img src={`/profile-photo${i}.png`} alt="" onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('photo-placeholder') }} />
+                  <img src={`/profile-photo${i}.webp`} alt="" onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('photo-placeholder') }} />
                   <svg className="photo-placeholder-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <rect x="2" y="2" width="28" height="28" rx="4" stroke="#562828" strokeWidth="2" opacity="0.3"/>
                     <circle cx="11" cy="11" r="3" stroke="#562828" strokeWidth="2" opacity="0.3"/>
