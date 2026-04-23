@@ -1,0 +1,199 @@
+/* ===== 手机外框 — 统一容器 402×852 ===== */
+.phone-frame {
+  position: relative;
+  width: 402px;
+  height: 852px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 44px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.6s ease;
+}
+
+.phone-frame.fade-out {
+  opacity: 0;
+}
+
+/* ===== 背景渐变层 ===== */
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgb(255, 243, 227) 100%
+  );
+  opacity: 0.54;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  animation: gradient-breathe 8s ease-in-out infinite;
+}
+
+@keyframes gradient-breathe {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ===== 插画背景层 ===== */
+.bg-illustration {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.bg-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* ===== 花瓣飘落层 (方案B) ===== */
+.petal-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  border-radius: 50% 0 50% 0;
+  opacity: 0;
+  animation: petal-fall linear infinite;
+}
+
+/* 12片花瓣，各自不同的起始位置、大小、速度、延迟，颜色随机取自画面花色（低饱和度） */
+.petal:nth-child(1)  { left: 8%;  width: 12px; height: 16px; background: rgba(210,165,130,0.5); animation-duration: 11s; animation-delay: 0s; }   /* 暖黄 */
+.petal:nth-child(2)  { left: 22%; width: 9px;  height: 13px; background: rgba(185,130,135,0.4); animation-duration: 14s; animation-delay: 2s; }   /* 柔红 */
+.petal:nth-child(3)  { left: 38%; width: 14px; height: 18px; background: rgba(145,165,195,0.45); animation-duration: 10s; animation-delay: 5s; }  /* 淡蓝 */
+.petal:nth-child(4)  { left: 52%; width: 8px;  height: 11px; background: rgba(205,155,125,0.35); animation-duration: 16s; animation-delay: 1s; }  /* 暖黄 */
+.petal:nth-child(5)  { left: 65%; width: 11px; height: 15px; background: rgba(175,125,130,0.5); animation-duration: 12s; animation-delay: 7s; }   /* 柔红 */
+.petal:nth-child(6)  { left: 78%; width: 10px; height: 14px; background: rgba(155,175,200,0.4); animation-duration: 13s; animation-delay: 3s; }   /* 淡蓝 */
+.petal:nth-child(7)  { left: 90%; width: 13px; height: 17px; background: rgba(195,150,120,0.45); animation-duration: 11s; animation-delay: 8s; }  /* 暖黄 */
+.petal:nth-child(8)  { left: 15%; width: 7px;  height: 10px; background: rgba(180,140,150,0.35); animation-duration: 15s; animation-delay: 4s; }  /* 柔红 */
+.petal:nth-child(9)  { left: 45%; width: 15px; height: 19px; background: rgba(140,160,190,0.5); animation-duration: 9s;  animation-delay: 6s; }   /* 淡蓝 */
+.petal:nth-child(10) { left: 70%; width: 9px;  height: 12px; background: rgba(200,160,135,0.4); animation-duration: 13s; animation-delay: 9s; }   /* 暖黄 */
+.petal:nth-child(11) { left: 30%; width: 10px; height: 13px; background: rgba(170,120,125,0.3); animation-duration: 17s; animation-delay: 1.5s; } /* 柔红 */
+.petal:nth-child(12) { left: 55%; width: 12px; height: 16px; background: rgba(160,170,195,0.45); animation-duration: 11s; animation-delay: 5.5s; } /* 淡蓝 */
+
+/* 奇偶花瓣分别向左/右摇摆 */
+.petal:nth-child(odd) { animation-name: petal-fall-left; }
+.petal:nth-child(even) { animation-name: petal-fall-right; }
+
+@keyframes petal-fall-left {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  10% { opacity: 1; }
+  25% { transform: translateY(230px) translateX(-30px) rotate(90deg); }
+  50% { transform: translateY(460px) translateX(20px) rotate(180deg); }
+  75% { transform: translateY(690px) translateX(-15px) rotate(270deg); }
+  90% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(920px) translateX(10px) rotate(360deg); }
+}
+
+@keyframes petal-fall-right {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  10% { opacity: 1; }
+  25% { transform: translateY(230px) translateX(25px) rotate(-90deg); }
+  50% { transform: translateY(460px) translateX(-20px) rotate(-180deg); }
+  75% { transform: translateY(690px) translateX(15px) rotate(-270deg); }
+  90% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(920px) translateX(-10px) rotate(-360deg); }
+}
+
+/* ===== 标题区域 ===== */
+.title-section {
+  position: absolute;
+  top: calc(852px / 3 - 80px);
+  left: 36px;
+  right: 36px;
+  text-align: left;
+  z-index: 4;
+}
+
+.title-text {
+  font-family: 'HanziPen SC', 'Ma Shan Zheng', cursive;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #562828;
+  margin: 0 0 12px;
+  letter-spacing: 2px;
+}
+
+.date-text {
+  font-family: 'PingFang SC', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #562828;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ===== 底部按钮区域 ===== */
+.bottom-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+/* ===== 创建空间按钮 ===== */
+.create-btn {
+  margin-top: 32px;
+  width: 231px;
+  height: 52px;
+  border: none;
+  border-radius: 30px;
+  background: rgb(86, 40, 40);
+  color: #ffffff;
+  font-family: 'PingFang SC', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 8px rgba(0, 0, 0, 0.09),
+    0 17px 11px rgba(0, 0, 0, 0.05),
+    0 31px 13px rgba(0, 0, 0, 0.01);
+}
+
+.create-btn:hover {
+  background: #4d2323;
+}
+
+.create-btn:active {
+  background: #441f1f;
+}
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 450px) {
+  .phone-frame {
+    width: 402px;
+    height: 852px;
+    zoom: calc(100vw / 402);
+    transform-origin: top center;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
