@@ -19,7 +19,7 @@ function LaunchPage() {
       {/* 插画背景层 */}
       <div className="bg-illustration">
         <img
-          src="/bg-illustration.png"
+          src="/bg-illustration.webp"
           alt="梦幻花林插画"
           className="bg-illustration-img"
         />

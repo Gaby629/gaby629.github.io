@@ -14,7 +14,7 @@ function HomePage() {
       <div className="header-bg">
         <img
           className="header-bg-img"
-          src="/header-bg.png"
+          src="/header-bg.webp"
           alt=""
           onError={(e) => { e.target.style.display = 'none' }}
         />
@@ -29,7 +29,7 @@ function HomePage() {
           <div className="avatar-wrap">
             <img
               className="avatar"
-              src="/avatar.png"
+              src="/avatar.webp"
               alt=""
               onError={(e) => {
                 e.target.style.display = 'none'
@@ -146,7 +146,7 @@ function HomePage() {
           <div className="year-photo-frame">
             <div className="year-photo year-photo-1">
               <img
-                src="/year-photo1.png"
+                src="/year-photo1.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -156,7 +156,7 @@ function HomePage() {
             </div>
             <div className="year-photo year-photo-2">
               <img
-                src="/year-photo2.png"
+                src="/year-photo2.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -166,7 +166,7 @@ function HomePage() {
             </div>
             <div className="year-photo year-photo-3">
               <img
-                src="/year-photo3.png"
+                src="/year-photo3.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -188,7 +188,7 @@ function HomePage() {
             <div className="feed-avatar-wrap">
               <img
                 className="feed-avatar"
-                src="/merry-avatar.png"
+                src="/merry-avatar.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -206,7 +206,7 @@ function HomePage() {
             <div className="feed-photo-wrap">
               <img
                 className="feed-photo"
-                src="/merry-photo.png"
+                src="/merry-photo.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -222,7 +222,7 @@ function HomePage() {
             <div className="feed-avatar-wrap">
               <img
                 className="feed-avatar"
-                src="/josphine-avatar.png"
+                src="/josphine-avatar.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -240,7 +240,7 @@ function HomePage() {
             <div className="feed-photo-wrap">
               <img
                 className="feed-photo"
-                src="/josphine-photo.png"
+                src="/josphine-photo.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -256,7 +256,7 @@ function HomePage() {
             <div className="feed-avatar-wrap">
               <img
                 className="feed-avatar"
-                src="/merry-avatar.png"
+                src="/merry-avatar.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -274,7 +274,7 @@ function HomePage() {
             <div className="feed-photo-wrap">
               <img
                 className="feed-photo"
-                src="/merry-photo.png"
+                src="/merry-photo.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -290,7 +290,7 @@ function HomePage() {
             <div className="feed-avatar-wrap">
               <img
                 className="feed-avatar"
-                src="/josphine-avatar.png"
+                src="/josphine-avatar.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -308,7 +308,7 @@ function HomePage() {
             <div className="feed-photo-wrap">
               <img
                 className="feed-photo"
-                src="/josphine-photo.png"
+                src="/josphine-photo.webp"
                 alt=""
                 onError={(e) => {
                   e.target.style.display = 'none'

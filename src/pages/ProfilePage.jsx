@@ -176,7 +176,7 @@ function ProfilePage() {
     <div className="profile-page">
       {/* ===== 顶部背景图区 (Mask group: 406x201, top=0, left=-4) ===== */}
       <div className="profile-bg">
-        <img className="profile-bg-img" src="/profile-bg.png" alt="" onError={(e) => { e.target.style.display = 'none' }} />
+        <img className="profile-bg-img" src="/profile-bg.webp" alt="" onError={(e) => { e.target.style.display = 'none' }} />
         {/* 渐变遮罩 Rectangle 29: 441x129, top=91, left=-22 */}
         <div className="profile-bg-gradient" />
       </div>
@@ -200,7 +200,7 @@ function ProfilePage() {
 
       {/* ===== 头像 (Ellipse 8: 62x62, left=28, top=132) ===== */}
       <div className="profile-avatar-wrap">
-        <img className="profile-avatar" src="/profile-avatar.png" alt=""
+        <img className="profile-avatar" src="/profile-avatar.webp" alt=""
           onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('placeholder') }} />
       </div>
 
@@ -208,7 +208,7 @@ function ProfilePage() {
       <h1 className="profile-name">坂本龙一</h1>
 
       {/* ===== 花束图片 — 右边距对齐胶囊矩形 ===== */}
-      <img className="flower-bouquet" src="/flower-bouquet.png" alt=""
+      <img className="flower-bouquet" src="/flower-bouquet.webp" alt=""
         onError={(e) => { e.target.style.display = 'none' }} />
 
       {/* ===== "71岁" (16px/400, left=140, top=211) ===== */}
@@ -313,7 +313,7 @@ function ProfilePage() {
           <div className="comment-item">
             <div className="comment-avatar-wrap">
               <div className="comment-avatar-border">
-                <img className="comment-avatar" src="/comment-avatar1.png" alt=""
+                <img className="comment-avatar" src="/comment-avatar1.webp" alt=""
                   onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('avatar-placeholder') }} />
               </div>
             </div>
@@ -338,7 +338,7 @@ function ProfilePage() {
           <div className="comment-item">
             <div className="comment-avatar-wrap">
               <div className="comment-avatar-border">
-                <img className="comment-avatar" src="/comment-avatar2.png" alt=""
+                <img className="comment-avatar" src="/comment-avatar2.webp" alt=""
                   onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('avatar-placeholder') }} />
               </div>
             </div>
@@ -363,7 +363,7 @@ function ProfilePage() {
           <div className="comment-item">
             <div className="comment-avatar-wrap">
               <div className="comment-avatar-border">
-                <img className="comment-avatar" src="/comment-avatar3.png" alt=""
+                <img className="comment-avatar" src="/comment-avatar3.webp" alt=""
                   onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('avatar-placeholder') }} />
               </div>
             </div>
@@ -388,7 +388,7 @@ function ProfilePage() {
           <div className="comment-item">
             <div className="comment-avatar-wrap">
               <div className="comment-avatar-border">
-                <img className="comment-avatar" src="/comment-avatar1.png" alt=""
+                <img className="comment-avatar" src="/comment-avatar1.webp" alt=""
                   onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('avatar-placeholder') }} />
               </div>
             </div>
@@ -483,7 +483,7 @@ function ProfilePage() {
       {showBloomGift && (
         <div className="bloom-gift-overlay">
           <div className={`bloom-gift-flower ${giftPhase === 'appear' ? 'bloom-gift-flower-visible' : ''} ${giftPhase === 'sway' ? 'bloom-gift-flower-visible bloom-gift-flower-sway' : ''} ${giftPhase === 'exit' ? 'bloom-gift-flower-visible bloom-gift-flower-exit' : ''}`}>
-            <img src="/bloom-redflower-large.png" alt="" />
+            <img src="/bloom-redflower-large.webp" alt="" />
           </div>
           {/* 沙化粒子 — S型飘散向鲜花56 */}
           <div className={`bloom-petal bloom-petal-1 ${giftPhase === 'exit' ? 'bloom-petal-active' : ''}`} />
