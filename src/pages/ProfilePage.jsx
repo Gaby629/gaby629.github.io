@@ -437,10 +437,10 @@ function ProfilePage() {
               {/* 第一行：小红花、白菊、白玫瑰、康乃馨 */}
               <div className="bloom-row">
                 {[
-                  { img: '/bloom-redflower.png', name: '小红花', meaning: '想念' },
-                  { img: '/bloom-whitedaisy.png', name: '白菊', meaning: '追思' },
-                  { img: '/bloom-whiterose.png', name: '白玫瑰', meaning: '怀念' },
-                  { img: '/bloom-carnation.png', name: '康乃馨', meaning: '思念' },
+                  { img: '/bloom-redflower.webp', name: '小红花', meaning: '想念' },
+                  { img: '/bloom-whitedaisy.webp', name: '白菊', meaning: '追思' },
+                  { img: '/bloom-whiterose.webp', name: '白玫瑰', meaning: '怀念' },
+                  { img: '/bloom-carnation.webp', name: '康乃馨', meaning: '思念' },
                 ].map((flower) => (
                   <div className={`bloom-item ${selectedFlower === flower.name ? 'bloom-item-selected' : ''}`} key={flower.name} onClick={() => setSelectedFlower(flower.name)}>
                     <div className="bloom-item-bg">
@@ -454,10 +454,10 @@ function ProfilePage() {
               {/* 第二行：马蹄莲、雏菊、勿忘我、向日葵 */}
               <div className="bloom-row">
                 {[
-                  { img: '/bloom-lily.png', name: '马蹄莲', meaning: '缅怀' },
-                  { img: '/bloom-daisy.png', name: '雏菊', meaning: '平安' },
-                  { img: '/bloom-forgetmenot.png', name: '勿忘我', meaning: '记得' },
-                  { img: '/bloom-sunflower.png', name: '向日葵', meaning: '阳光' },
+                  { img: '/bloom-lily.webp', name: '马蹄莲', meaning: '缅怀' },
+                  { img: '/bloom-daisy.webp', name: '雏菊', meaning: '平安' },
+                  { img: '/bloom-forgetmenot.webp', name: '勿忘我', meaning: '记得' },
+                  { img: '/bloom-sunflower.webp', name: '向日葵', meaning: '阳光' },
                 ].map((flower) => (
                   <div className={`bloom-item ${selectedFlower === flower.name ? 'bloom-item-selected' : ''}`} key={flower.name} onClick={() => setSelectedFlower(flower.name)}>
                     <div className="bloom-item-bg">
